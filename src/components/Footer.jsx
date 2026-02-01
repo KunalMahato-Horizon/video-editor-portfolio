@@ -330,7 +330,7 @@ const Footer = () => {
               <Zap size={10} className="opacity-0 group-hover:opacity-100" />
               Privacy_Terms
             </button>
-            <span className="text-zinc-800">//</span>
+            <span className="text-zinc-800">/**/</span>
             <span className="hover:text-white transition-colors cursor-pointer">
               © 2026 FRAME LEVEL
             </span>
