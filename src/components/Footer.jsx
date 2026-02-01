@@ -46,11 +46,19 @@ const Footer = () => {
     setTimeout(() => setEmailSent(false), 3000);
   };
 
+  // Navigation handler for links that don't have actual destinations yet
+  const handleNavigation = (e, section = "", link = "") => {
+    e.preventDefault();
+    console.log(`Navigating to: ${section} - ${link}`);
+    // Add your actual navigation logic here
+    // For example: router.push(`/${section.toLowerCase()}/${link.toLowerCase()}`);
+  };
+
   const socialLinks = [
-    { name: "Instagram", icon: <Instagram size={20} />, color: "hover:text-[#E1306C]" },
-    { name: "Twitter", icon: <Twitter size={20} />, color: "hover:text-[#1DA1F2]" },
-    { name: "YouTube", icon: <Youtube size={20} />, color: "hover:text-[#FF0000]" },
-    { name: "Behance", icon: <ExternalLink size={20} />, color: "hover:text-[#0057FF]" },
+    { name: "Instagram", icon: <Instagram size={20} />, color: "hover:text-[#E1306C]", url: "https://instagram.com" },
+    { name: "Twitter", icon: <Twitter size={20} />, color: "hover:text-[#1DA1F2]", url: "https://twitter.com" },
+    { name: "YouTube", icon: <Youtube size={20} />, color: "hover:text-[#FF0000]", url: "https://youtube.com" },
+    { name: "Behance", icon: <ExternalLink size={20} />, color: "hover:text-[#0057FF]", url: "https://behance.net" },
   ];
 
   const quickLinks = [
@@ -225,13 +233,14 @@ const Footer = () => {
                         whileHover={{ x: -4 }}
                         className="group"
                       >
-                        <a 
-                          href="#" 
-                          className="text-sm font-bold uppercase tracking-widest text-zinc-800 hover:text-white transition-colors flex items-center justify-end gap-2"
+                        {/* FIXED: Changed to button since these are navigation placeholders */}
+                        <button 
+                          onClick={(e) => handleNavigation(e, section.title, link)}
+                          className="text-sm font-bold uppercase tracking-widest text-zinc-800 hover:text-white transition-colors flex items-center justify-end gap-2 w-full"
                         >
                           <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 text-blue-500" />
                           {link}
-                        </a>
+                        </button>
                       </motion.li>
                     ))}
                   </ul>
@@ -258,8 +267,11 @@ const Footer = () => {
                       onMouseLeave={() => setIsHovered(null)}
                       className="group relative"
                     >
+                      {/* FIXED: Added actual URLs for social links */}
                       <a 
-                        href="#" 
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`text-4xl md:text-5xl font-black uppercase tracking-tighter transition-all duration-300 flex items-center justify-end gap-4 ${social.color}`}
                       >
                         <span className="text-zinc-800 group-hover:text-white transition-colors">
@@ -310,10 +322,14 @@ const Footer = () => {
           
           {/* Legal Links */}
           <div className="flex items-center gap-8 text-xs font-mono text-zinc-600 uppercase tracking-widest">
-            <a href="#" className="hover:text-white transition-colors flex items-center gap-2 group">
+            {/* FIXED: Changed to button for placeholder link */}
+            <button 
+              onClick={(e) => handleNavigation(e, "legal", "privacy")}
+              className="hover:text-white transition-colors flex items-center gap-2 group"
+            >
               <Zap size={10} className="opacity-0 group-hover:opacity-100" />
               Privacy_Terms
-            </a>
+            </button>
             <span className="text-zinc-800">//</span>
             <span className="hover:text-white transition-colors cursor-pointer">
               © 2026 FRAME LEVEL
@@ -344,8 +360,9 @@ const Footer = () => {
         )}
       </AnimatePresence>
 
-      {/* Floating Email Badge */}
-      {/* <motion.div 
+      {/* Floating Email Badge - commented out with JSX comment syntax */}
+      {/* 
+      <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         className="fixed bottom-8 left-8 bg-black/40 backdrop-blur-md border border-white/10 px-4 py-3 rounded-full hidden lg:flex items-center gap-3 z-50 group"
@@ -354,7 +371,8 @@ const Footer = () => {
         <Mail size={14} className="text-blue-500 group-hover:scale-110 transition-transform" />
         <span className="text-sm font-mono">hello@framelevel.com</span>
         <span className="text-xs text-zinc-600 group-hover:text-blue-400 transition-colors">Copy</span>
-      </motion.div> */}
+      </motion.div>
+      */}
 
       {/* Global CSS */}
       <style jsx global>{`
