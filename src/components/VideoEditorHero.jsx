@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Play, ArrowRight, Monitor, Sparkles, Zap, Scissors } from "lucide-react";
+import { Play, ArrowRight, Monitor, Sparkles, Scissors } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const VideoEditorHero = ({ onPlay }) => {

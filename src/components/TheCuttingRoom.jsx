@@ -5,14 +5,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { 
   Play, Pause, Scissors, Film, Zap, Type, Palette, Volume2, VolumeX,
-  Grid, MousePointer, Clock, Settings, Layers, Download, Heart, Eye, Camera, Mic,
-  Music, Sparkles, ChevronRight, ChevronLeft, Maximize2, Minimize2,
-  RotateCw, RotateCcw, Filter, Crop, AlertCircle, CheckCircle,
-  HardDrive, Cpu, Smartphone, Tablet, Laptop, FilmStrip, Monitor,
-  MoveLeft, MoveRight, Search, X, Check, Plus, Minus, ZoomIn, ZoomOut,
-  BarChart3, TrendingUp, Shield, Cloud, Wifi, Battery, Radio,
-  ArrowUpRight, ArrowDownRight, Settings2, Bell, User, HelpCircle,
-  BatteryCharging, Activity, Disc3
+  Grid, Clock, Settings, Layers, Download, Heart, Eye,
+  ChevronRight, ChevronLeft, Maximize2, Minimize2,
+  Filter, Crop, CheckCircle,
+  HardDrive, Cpu, Monitor, X, Plus, Minus,
+  BarChart3, TrendingUp,
+  ArrowUpRight, Settings2, Activity, Disc3
 } from "lucide-react";
 
 const UNSHLASH_IMAGES = {

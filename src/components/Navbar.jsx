@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight, Globe, Sparkles, Zap, Target, Clock } from "lucide-react";
+import { Menu, X, ArrowUpRight, Globe, Sparkles, Clock } from "lucide-react";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);

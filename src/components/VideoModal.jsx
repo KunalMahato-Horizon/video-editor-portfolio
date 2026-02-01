@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Maximize2, volume2 } from "lucide-react";
+import { X, Maximize2 } from "lucide-react";
 
 const VideoModal = ({ isOpen, onClose, videoId, title }) => {
   if (!isOpen) return null;

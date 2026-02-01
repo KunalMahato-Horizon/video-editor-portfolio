@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, } from "framer-motion";
 import { Send, ArrowUpRight, Mail, Clock, MapPin, Sparkles } from "lucide-react";
 import { useState } from "react";
 

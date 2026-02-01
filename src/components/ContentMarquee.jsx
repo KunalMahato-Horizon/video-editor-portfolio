@@ -1,14 +1,14 @@
 "use client";
 
 import { motion, useAnimation, useInView } from "framer-motion";
-import { ExternalLink, Play, Film, Sparkles, Zap, Clock, TrendingUp } from "lucide-react";
+import { Film, Zap, TrendingUp } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const ContentMarquee = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.2 });
   const controls = useAnimation();
-  const [hoveredItem, setHoveredItem] = useState(null);
+  // const [hoveredItem, setHoveredItem] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Instagram, Twitter, Youtube, ArrowUpRight, Globe, Zap, ArrowUp, Send, Clock, MapPin, Sparkles, Film, ExternalLink } from "lucide-react";
+import { Instagram, Twitter, Youtube, ArrowUpRight, Zap, ArrowUp, Send, Clock, MapPin, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Footer = () => {
